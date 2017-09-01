@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flappy bird</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/public.css">
+  <link rel="stylesheet" type="text/css" href="css/flappy-bird.css">
+</head>
+
+<body>
+
+  <!-- loading progress -->
+  <section class="loading-layer">
+    <h6>Loading...</h6>
+    <div class="progress-box">
+      <div class="progress-bar"></div>
+    </div>
+    <a href="#" class="no-select" id="game_start">START</a>
+  </section>
+
+  <!-- restart -->
+  <a href="#" class="no-select" id="game_restart">RESTART</a>
+  
+  <!-- script -->
+  <canvas id="canvas"></canvas>
+  <script src="js/util.js"></script>
+  <script src="js/simpleInheritance.js"></script>
+  <script src="js/FrameUtil.class.js"></script>
+  <script src="js/StaticResourceUtil.class.js"></script>
+  <script src="js/Background.class.js"></script>
+  <script src="js/Bird.class.js"></script>
+  <script src="js/Pipe.class.js"></script>
+  <script src="js/ActorManager.class.js"></script>
+  <script src="js/ScoreAmount.class.js"></script>
+  <script src="js/LoadingProgress.class.js"></script>
+  <script src="js/Game.class.js"></script>
+  <script type="text/javascript">
+    var STAGE_WIDTH = document.body.clientWidth || document.documentElement.clientWidth;
+    var STAGE_HEIGHT = document.body.clientHeight || document.documentElement.clientHeight;
+    var game = new Game({
+      timeDiff: 25,
+      canvasID: '#canvas'
+    });
+  </script>
+</body>
+
+</html>
